@@ -1,0 +1,12 @@
+.form-control[type=file]::file-selector-button {
+    overflow: hidden;
+    background: linear-gradient(303deg, #49a3f1, #1A73E8) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 10px;
+    box-shadow: 0rem 0.1875rem 0.1875rem 0rem rgba(26, 115, 232, 0.15), 0rem 0.1875rem 0.0625rem -0.125rem rgba(26, 115, 232, 0.2), 0rem 0.0625rem 0.3125rem 0rem rgba(26, 115, 232, 0.15) !important;
+
+}
+.navFile{
+    border: none;
+}
