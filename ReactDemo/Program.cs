@@ -1,3 +1,5 @@
+using TestDemo.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +9,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<ITenantService, TenantService>();
+
 var app = builder.Build();
+app.UseRouting();
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
